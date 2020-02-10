@@ -3,7 +3,7 @@
 events.out.tfevents.**
 *.egg-info/
 *.ckpt*
-checkpoint
+.ipynb_checkpoints/
 *.out
 *.DS_store
 im.zip
