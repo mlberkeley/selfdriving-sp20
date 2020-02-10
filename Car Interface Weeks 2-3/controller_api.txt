@@ -1,0 +1,98 @@
+The controller.pyc file defines the Car_Interface class.  Below is a description of this class and
+how one may interact with instatiations of it.
+
+
+Initialization: 
+1. __init__(self, model = "simple")
+Example Usage: 
+	simple_ci = Car_Inteface()
+	complex_ci = Car_Interace(model = "complex")
+Description:
+	Initializes a Car_Interface.  The model determines how the pedal inputs translate to acceleration.
+There are two supported models "simple" and "complex".  Both of which we will be working with.  The
+"simple" model is linear, whereas the "complex" model introduces some nonlinearities in the
+acceleration computation.
+
+
+Steering:
+2. steer_to(self, ang)
+Example Usage:
+	ci = Car_Interface()
+	ci.set_gear(ci.FORWARD)
+	ci.steer_to(0.5)
+Description:
+	Immediately shifts car's heading to provided angle.  ang should be between -1 (R) and 1 (L).
+
+
+Gears:
+3. set_gear(self, gear):
+Example Usage:
+	ci = Car_Interface()
+	ci.set_gear(ci.FORWARD)
+Description:
+	Sets the car's gear to provided option.  gear should be one of self.FORWARD or self.REVERSE.
+
+4. get_gear(self):
+Example Usage:
+	ci = Car_Interface()
+	ci.get_gear() #returns None
+	ci.set_gear(ci.FORWARD)
+	ci.get_gear() #returns ci.FORWARD
+Description:
+	Returns the gear the car is currently in.  Note the original gear is None, which corresponds
+to a stationary setting.
+
+
+Pedals: 
+5. apply_control(self, pedal, amount)
+Example Usage:
+	ci = Car_Interface()
+	ci.set_gear(ci.FORWARD)
+	ci.apply_control(ci.ACCELERATOR, 0.7)
+	ci.apply_control(ci.BRAKE, 0.85)
+Description:
+	Applies the specified control for one dt time step (Default: 1/15 seconds). pedal should be one 
+of {None, self.ACCELERATOR, self.BRAKE}.  The pedal corresponds to what pedal is being depressed.  The
+degree you wish to depress the pedal is the second parameter, amount.  This value should be in 
+the range [0, 1] (ex. 0.7: 70% depression).  The acceleration is defined as a function of the pedal
+amounts depending on the model provided at instantiation.  Once the acceleration has been determined,
+the position and velocity are updated assuming constant acceleration over the dt interval.
+
+
+Measurements:
+6. measure(self, key)
+Example Usage:
+	ci = Car_Interface()
+	ci.set_gear(ci.FORWARD)
+	ci.apply_control(ci.ACCELERATOR, 0.7)
+	ci.measure("velocity") #Returns numerical value
+Description:
+	Returns a noisy measurement of the desired quantity.  Possible measurement keys are "position",
+"velocity", and "accel" (acceleration).
+
+7. zero_position(self):
+Example Usage:
+	ci = Car_Interface()
+	ci.set_gear(ci.FORWARD)
+	ci.measure("position") #Returns 0
+	ci.apply_control(ci.ACCELERATOR, 0.7)
+	ci.measure("position") #Returns nonzero value
+	ci.zero_position()
+	ci.measure("position") #Returns 0
+Description:
+	Sets current position to 0.  A measurement of position is with respect to the last time this
+method was called (or the initialization of the Car_Interface object).
+
+
+Duckietown:
+8. duckietown_control(self)
+Example Usage:
+	ci = Car_Interface()
+	ci.set_gear(ci.FORWARD)
+	ci.measure("position") #Returns 0
+	ci.apply_control(ci.ACCELERATOR, 0.7)
+	ci.duckietown_control() #Returns length 2 duckietown control list
+Description:
+	Returns a list of length 2, [current velocity control, current steering angle control].  These
+two values are all that is needed by the duckietown simulator.
+

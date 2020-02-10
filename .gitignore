@@ -1,0 +1,11 @@
+*.pyc
+.idea/
+events.out.tfevents.**
+*.egg-info/
+*.ckpt*
+checkpoint
+*.out
+*.DS_store
+im.zip
+seg_results.pkl
+!controller.pyc

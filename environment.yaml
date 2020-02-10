@@ -1,14 +1,12 @@
-name: gym-duckietown
-channels:
-    - pytorch
-    - defaults
+name: sdc_decal
 dependencies:
     - python=3.6
-    - pytorch=1.0
-    - torchvision
     - pyzmq
     - numpy
     - pyyaml=3.12
+    - pip
+    - scikit-learn
+    - matplotlib
     - pip:
         - gym
         - pyglet
@@ -16,3 +14,7 @@ dependencies:
         - scikit-image
         - dataclasses
         - pygeometry
+        - cloudpickle
+        - torch
+        - torchvision
+        - jupyter
