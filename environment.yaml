@@ -1,20 +1,23 @@
 name: sdc_decal
 dependencies:
     - python=3.6
-    - pyzmq
+    - pyzmq=18.1.1
     - numpy
-    - pyyaml=3.12
+    - pyyaml=5.2
     - pip
     - scikit-learn
     - matplotlib
     - pip:
-        - gym
-        - pyglet
-        - opencv-python
-        - scikit-image
-        - dataclasses
-        - pygeometry
-        - cloudpickle
-        - torch
+        - gym==0.15.4
+        - pyglet==1.4.10
+        - opencv-python==4.1.2.30
+        - scikit-image==0.16.2
+        - dataclasses==0.6
+        - pygeometry==1.5.6
+        - cloudpickle==1.2.2
+        - duckietown_slimremote==2018.10.1
+        - torch==1.4.0
         - torchvision
         - jupyter
+        - numpy==1.18.0
+        - tensorflow>=2.0
