@@ -2,6 +2,8 @@
 
 Self Driving Car Decal taught by Machine Learning @ Berkeley, Spring 2020 at UC Berkeley.
 
+Questions? Post on Piazza
+
 Week 1 Introduction:
 
 Lecture Slides: https://docs.google.com/presentation/d/1m_08cHpmsF8a-8SVDKsQ8kDhvl-cWh3gSNx28wQF2Fs/edit?usp=sharing
