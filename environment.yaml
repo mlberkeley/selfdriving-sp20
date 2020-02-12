@@ -20,4 +20,5 @@ dependencies:
         - torchvision
         - jupyter
         - numpy==1.18.0
-        - tensorflow>=2.0
+        - tensorflow==2.1
+        - git+git://github.com/brandontrabucco/diffopt.git
