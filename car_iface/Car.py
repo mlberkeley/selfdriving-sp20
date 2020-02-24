@@ -82,7 +82,10 @@ class Car():
             if settings.use_internal_if_available and os.path.exists(internal_path):
                 self.data_points_file_path = internal_path
             else:
-                self.data_points_file_path = os.path.join(cur_dir, '../hw/sysid/')
+                if (car_model == "simple"):
+                    self.data_points_file_path = os.path.join(cur_dir, '../hw/sysid/')
+                elif (car_model == "complex"):
+                    self.data_points_file_path = os.path.join(cur_dir, '../demos/week3/')
             self.data_points_file_path = os.path.join(self.data_points_file_path, f'{car_model}_data_points.json')
 
 

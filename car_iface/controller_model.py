@@ -1,4 +1,5 @@
 import os
+from utils import nn
 
 class Car_Interface():
     '''
@@ -12,8 +13,6 @@ class Car_Interface():
             raise Exception(f"Illegal argument model can only be 'simple' or 'complex' not {model}")
 
         self.model = model
-        if (self.model == "complex"):
-            import sysid.nn as nn
 
         #Variables to keep track of the car's current state
         self.position = 0
@@ -54,7 +53,7 @@ class Car_Interface():
         The model has 3 inputs (accelerator depression, brake depression, velocity)
         '''
         if (self.model == "complex"):
-            self.complex_accel_fcn = nn.fcn(model_name = os.path.join(self.sys_id_fp(), "complex_accel"), num_inputs = 3)
+            self.complex_accel_fcn = nn.fcn(model_name = self.complex_weights_fp(), num_inputs = 3)
 
         #Variables to keep track of time (seconds)
         self.T = 0
@@ -209,11 +208,11 @@ class Car_Interface():
     def steer_to(self, ang):
         self.steering_angle = max(-1, min(ang, 1))
 
-    def sys_id_fp(self):
-        import settings
-
+    '''
+    Crawls the working directory up to the top most folder for which
+    car_iface should be a child directory.  Adds the name of the file
+    to get the learned weights for the complex model.
+    '''
+    def complex_weights_fp(self):
         cur_dir = os.path.dirname(__file__)
-        internal_path = os.path.join(cur_dir, '../../internal_only/sysid/')
-        if settings.use_internal_if_available and os.path.exists(internal_path):
-            return internal_path
-        return os.path.join(os.path.dirname(__file__), '../sysid/')
+        return os.join(cur_fp, "complex_accel")
