@@ -215,4 +215,4 @@ class Car_Interface():
     '''
     def complex_weights_fp(self):
         cur_dir = os.path.dirname(__file__)
-        return os.join(cur_fp, "complex_accel")
+        return os.path.join(cur_dir, "complex_accel")
