@@ -18,7 +18,8 @@ _possible_modules = [
   'manual',
   'sysID_data',
   'sysID_test',
-  'braking_distance'
+  'braking_distance',
+  'vision'
 ]
 
 for m in _possible_modules:
