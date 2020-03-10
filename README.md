@@ -10,9 +10,8 @@
 * **Anaconda Commands**: https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
 
 **Week 5 Deep Computer Vision**:
-Lecture slides:
 
-https://docs.google.com/presentation/d/1X5kHoORE_AFA88fthX985rMfqVqTUkPlxaDaFltSn-4/edit?usp=sharing
+Lecture slides: https://docs.google.com/presentation/d/1X5kHoORE_AFA88fthX985rMfqVqTUkPlxaDaFltSn-4/edit?usp=sharing
 
 Collect data that we will use to train the semantic segmentation network in the next homework. Learn more about deep learning.
 
