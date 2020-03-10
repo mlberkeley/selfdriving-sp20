@@ -9,6 +9,21 @@
 * **Piazza**: https://piazza.com/class/k6ip3fsmllu4zw
 * **Anaconda Commands**: https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
 
+**Week 5 Deep Computer Vision**:
+Lecture slides:
+
+https://docs.google.com/presentation/d/1X5kHoORE_AFA88fthX985rMfqVqTUkPlxaDaFltSn-4/edit?usp=sharing
+
+Collect data that we will use to train the semantic segmentation network in the next homework. Learn more about deep learning.
+
+* Look at:
+  * Slides
+  * hw/data_collection/visualization.ipynb
+* Write in:
+  * hw/data_collection/hw.py
+* Read:
+  * [Stanford feature visualization slides](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture12.pdf)
+
 **Week 4 Convolutions**:
 
 Lecture Slides: https://docs.google.com/presentation/d/1dMb-dWtL7BxnpUaNOiXEig3nv16XAbSBNrWZZG-pIKc/edit?usp=sharing
