@@ -1,7 +1,7 @@
 import numpy as np
 
 from hw import maxpool2d, conv2d_full
-from utils import imload, imsave
+from utils import imload, imsave_grayscale
 
 kodim = imload('kodim20.png')
 
@@ -28,4 +28,4 @@ stack3 = np.stack([k3, k2, k2], axis=2)
 test = conv2d_full(kodim, [stack1, stack2, stack3], stride=3)
 test = maxpool2d(test, size=7, stride=5)
 
-imsave(test, 'online_checkoff.png')
+imsave_grayscale(test, 'online_checkoff.png')
