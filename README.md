@@ -9,6 +9,23 @@
 * **Piazza**: https://piazza.com/class/k6ip3fsmllu4zw
 * **Anaconda Commands**: https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
 
+**Week 8 Control Theory**:
+
+Lecture slides: https://docs.google.com/presentation/d/1A9dYKlm2WGc4HPRNWtgkLyKQ0i9gTb60VZnDAe8dF1Y/edit?usp=sharing
+
+Zoom Recording: https://drive.google.com/open?id=1kyj_Q5M9wAZoEqgBHHSnLmKlSNeNRqXF
+
+Familiarize yourself with control loops with waypoints. Implement PID with a 3-dimensional state and a 2-dimensional action.
+Explore Iterative LQR and select a suitable quadratic cost for our system. 
+
+* Look at:
+  * Slides
+  * demos/week8/PID_demo.ipynb
+  * hw/control/control_loop.py
+* Write in:
+  * hw/control/pid.py (most information is in here, check-in at the bottom)
+  * hw/control/ilqr.py
+
 **Week 7 Path Planning**:
 
 Lecture slides: https://docs.google.com/presentation/d/1ohDzFXFGfnbsVfCOMScSdRRLCVKZ_Lq78YvOIeca86E/edit?usp=sharing
