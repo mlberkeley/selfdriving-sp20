@@ -1,7 +1,7 @@
 import tensorflow as tf
 import numpy as np
 import sys
-sys.path.append('../../common/duckietown-sim/')
+sys.path.append('../../duckietown-sim/')
 from gym_duckietown.envs import DuckietownEnv
 
 from diffopt import Deterministic

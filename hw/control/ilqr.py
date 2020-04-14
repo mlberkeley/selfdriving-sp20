@@ -171,8 +171,7 @@ if __name__ == "__main__":
     # ======= INITIAL POLICY =========
     
     # Initialize policy at always cruising forward
-    controls_model = Deterministic(lambda time, inputs: [tf.constant([0.2, 0.])])
-
+    controls_model = Deterministic(lambda time, inputs: [tf.constant([[0.2, 0.]])])
 
     # ======== CONTROL LOOP ==========
     # Choose which dynamics model to use. The simplified one is faster but less accurate.

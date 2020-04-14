@@ -1,7 +1,7 @@
 import numpy as np
 from control_loop import ControlLoop
 import sys
-sys.path.append('../duckietown-sim/')
+sys.path.append('../../duckietown-sim/')
 from gym_duckietown.envs import DuckietownEnv
 
 '''
@@ -38,7 +38,7 @@ class PID(ControlLoop):
       Input: state = [x, y, heading angle]
       Access to self.cur_waypoint = [target_x, target_y]
       Output: action = [throttle, steering]
-    Refer to PID_demo in this folder if you want to reference a PID implementation
+    Refer to PID_demo in demos/week 8 if you want to reference an example PID loop
     '''
     def calc_action(self, state):
         cur_pos, cur_angle = state[:2], state[2]

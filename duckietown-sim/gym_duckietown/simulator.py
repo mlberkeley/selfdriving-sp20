@@ -500,7 +500,7 @@ class Simulator(gym.Env):
 
         # If the map specifies a starting tile
         if self.user_tile_start:
-            print(self.user_tile_start)
+            # print(self.user_tile_start)
             #logger.info('using user tile start: %s' % self.user_tile_start)
             i, j = self.user_tile_start
 
