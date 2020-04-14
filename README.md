@@ -18,6 +18,8 @@ Zoom Recording: https://drive.google.com/open?id=1kyj_Q5M9wAZoEqgBHHSnLmKlSNeNRq
 Familiarize yourself with control loops with waypoints. Implement PID with a 3-dimensional state and a 2-dimensional action.
 Explore Iterative LQR and select a suitable quadratic cost for our system. 
 
+Make sure you have diffopt installed `pip install git+http://github.com/brandontrabucco/diffopt.git`
+
 * Look at:
   * Slides
   * demos/week8/PID_demo.ipynb
