@@ -29,7 +29,7 @@ setup(
             'pyzmq==18.1.1',
             'scikit-image==0.16.2',
             'opencv-python==4.1.2.30',
-            'pyyaml==5.2',
+            'pyyaml==5.4',
             'cloudpickle==1.2.2',
             'duckietown_slimremote==2018.10.1',
             'pygeometry==1.5.6',
