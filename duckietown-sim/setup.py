@@ -28,7 +28,7 @@ setup(
             'pyglet==1.4.10',
             'pyzmq==18.1.1',
             'scikit-image==0.16.2',
-            'opencv-python==4.1.2.30',
+            'opencv-python==4.2.0.32',
             'pyyaml==5.2',
             'cloudpickle==1.2.2',
             'duckietown_slimremote==2018.10.1',
