@@ -24,7 +24,7 @@ setup(
         keywords='duckietown, environment, agent, rl, openaigym, openai-gym, gym',
         install_requires=[
             'gym==0.15.4',
-            'numpy==1.18.0',
+            'numpy==1.22.0',
             'pyglet==1.4.10',
             'pyzmq==18.1.1',
             'scikit-image==0.16.2',
